@@ -6,14 +6,22 @@ import React from 'react';
 import { FaDownload } from 'react-icons/fa'
 
 const Nav = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+    const [isMobile, setIsMobile] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768)
+        }
+        window.addEventListener('resize', handleResize)
+        handleResize() // Check on mount
 
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     const pathname = usePathname();
     const resumePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/files/Resume_Yuheng Chen_Purdue_ECE_PhD.pdf`

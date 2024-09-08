@@ -8,7 +8,16 @@ const paperlinkStyle = "font-[400] italic text-sky-500"
 const paperlinkInView = ""
 
 const ResearchPage = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize() // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
     <div className={`${isMobile ? "px-mobile":"px-body1"}`}>
       <div className='Machine learning for device optimization mt-2'>
