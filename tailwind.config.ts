@@ -14,6 +14,7 @@ const config: Config = {
       },
       spacing: {
         'body1': '4rem',  // 2px
+        'mobile':"1rem",
       },
     },
   },

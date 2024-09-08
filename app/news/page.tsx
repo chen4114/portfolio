@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import React from 'react'
 
@@ -14,8 +17,18 @@ const NewsPage = () => {
   const paperlinkInView = ""
 
   const dateStyle = "inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2"
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize() // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
-    <div className='px-body1'>
+    <div className={`${isMobile ? "px-mobile":"px-body1"}`}>
 
 
       <div>

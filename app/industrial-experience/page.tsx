@@ -1,3 +1,6 @@
+
+"use client";
+import { useEffect, useState } from 'react';
 import React from 'react'
 
 import { SiCplusplus, SiPython, SiPytorch, SiTensorflow } from 'react-icons/si';
@@ -24,9 +27,19 @@ const imgGroupList = [imgGroup1, imgGroup2]
 
 // Main HomePage Component
 const Industry = () => {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize() // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
-    <div className='px-body1'>
-      <ExperiencePart />
+    <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
+      <ExperiencePart isMobile={isMobile} />
 
     </div>
   )
@@ -50,9 +63,13 @@ interface Job {
   content: JobContent;
 }
 
+interface ExperiencePartProp {
+  isMobile?: boolean
+}
+
 
 // Services Section
-const ExperiencePart: React.FC = () => {
+const ExperiencePart: React.FC<ExperiencePartProp> = (isMobile) => {
 
 
   const experienceList: Job[] = [
@@ -101,11 +118,17 @@ const ExperiencePart: React.FC = () => {
             <div key={index} className="education-entry">
               <TitleOne title={job.title} right={`${job.startYear} - ${job.endYear}`}
               >
-                <div className='flex items-end'>
+                {!isMobile && <div className='flex items-end'>
                   <b className='px-[0.5rem]'>{job.company} </b>
                   <i>({job.location})</i>
-                </div>
+                </div>}
+
               </TitleOne>
+
+              {isMobile && <div className='flex items-end'>
+                  <b className='px-[0.5rem]'>{job.company} </b>
+                  <i>({job.location})</i>
+                </div>}
 
               {job.skillset && <div className='flex  mt-3'>
                 <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Skills:</span>
@@ -116,7 +139,7 @@ const ExperiencePart: React.FC = () => {
                 Mentor: {job.mentor}
               </span>
               }
-                       {job.manager && <span className="block text-sky-900 h-full rounded-md px-2 mr-3">
+              {job.manager && <span className="block text-sky-900 h-full rounded-md px-2 mr-3">
                 Manager: {job.manager}
               </span>
               }

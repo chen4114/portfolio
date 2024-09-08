@@ -1,7 +1,10 @@
 
+"use client";
+import { useEffect, useState } from 'react';
 import ImageGroup from '@/components/image_group';
 import TitleOne from '@/components/title-one';
 import Image from 'next/image';
+
 import { FaEnvelope, FaGithub, FaGoogle, FaLinkedinIn } from 'react-icons/fa';
 const profileImgUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/profile.jpg`;
 const microsoft = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/microsoft.png`;
@@ -12,17 +15,30 @@ const imgGroup2 = [microsoft, QuEra, oka]
 
 // Main HomePage Component
 export default function HomePage() {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize() // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
 
   return (
-    <div className='px-body1'>
-      <div className="flex mt-[2rem]">
-        <div className="w-[22rem] mr-[2rem]">
+    <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
+      <div className={`flex mt-[2rem]  ${isMobile && "flex-col"}`}>
+        <div className={`w-[22rem] mr-[2rem]`}>
           <ContactInfo />
         </div>
-        <div className=' flex items-center'>   {/* divider */}
+        {!isMobile && <div className=' flex items-center'>   {/* divider */}
           <div className='w-[2px] h-[20rem] max-h-[100%] bg-gray-200'></div>
-        </div>
-        <div className="ml-[2rem] flex-grow px-4">
+        </div>}
+        <div className={`${isMobile ? "mt-6" : "ml-[2rem]  px-4"} flex-grow`}>
+
+
           <About />
         </div>
       </div>
@@ -31,8 +47,8 @@ export default function HomePage() {
       </div>
 
       <div className='mt-[4rem]'>
-      <TitleOne title='Collabrations'/>
-      <ImageGroup imgGroup={imgGroup2}/>
+        <TitleOne title='Collabrations' />
+        <ImageGroup imgGroup={imgGroup2} />
       </div>
     </div>
   );
@@ -87,7 +103,7 @@ function ContactInfo() {
 // About Section
 function About() {
   return (
-    <div className="container ">
+    <div className=" ">
       <div className="text-xl font-bold ">Hi, I am Yuheng Chen!</div>
       <p className='font-[600]'>I&apos;m actively looking for full-time internship opportunities for 2025 summer!</p>
       <ul className='italic text-sm text-slate-500'>
