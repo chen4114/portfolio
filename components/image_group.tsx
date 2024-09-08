@@ -6,6 +6,7 @@ interface ImgGroupProp {
 }
 
 const ImageGroup:React.FC<ImgGroupProp> = ({imgGroup}) => {
+
   return (
     <div className='flex gap-5'>
     {imgGroup.map((item, index) => (<>
@@ -14,6 +15,7 @@ const ImageGroup:React.FC<ImgGroupProp> = ({imgGroup}) => {
       </div>
       </>
     ))}
+    test
 
 
   </div>

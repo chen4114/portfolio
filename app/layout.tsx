@@ -26,6 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title title="test">Yuheng Chen&#39;s Portfolio</title>
+        <meta name="description" content="This is an awesome website built with Next.js" />
+      </head>
+
       
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

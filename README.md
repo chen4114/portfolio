@@ -1,8 +1,3 @@
-#### start the project
-npm run dev
+Welcome to Yuheng's portfolio!
 
-
-#### Tailwind
-##### text & font1 style
-https://tailwindcss.com/docs/text-indent
-
+You can visit at [https://chen4114.github.io/portfolio/](https://chen4114.github.io/portfolio/)

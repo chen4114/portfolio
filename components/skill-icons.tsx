@@ -25,7 +25,7 @@ interface TechIconsProp {
 const TechIcon: React.FC<TechIconProp> = ({ skill }) => {
   const icon = iconMap[skill];
   return (
-    <div  className='flex items-center  gap-1'>
+    <div  className='flex items-center mx-4 gap-1'>
       {icon ? <span className='text-slate-500'>{icon}</span> :
       <span className='h-[80%] flex items-center text-center bg-slate-500 text-white rounded px-[2px]'>{skill.slice(0,2)}</span>
       }
@@ -36,7 +36,7 @@ const TechIcon: React.FC<TechIconProp> = ({ skill }) => {
 
 const TechIcons: React.FC<TechIconsProp> = ({ skills }) => {
   return (
-    <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+    <div className='' style={{ display: 'flex', flexWrap: 'wrap' }}>
       {skills.split(",").map((skill, index) => (
         <TechIcon key={index} skill={skill.trim()} />
       ))}

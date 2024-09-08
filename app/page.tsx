@@ -1,10 +1,14 @@
 
+import ImageGroup from '@/components/image_group';
 import TitleOne from '@/components/title-one';
 import Image from 'next/image';
 import { FaEnvelope, FaGithub, FaGoogle, FaLinkedinIn } from 'react-icons/fa';
 const profileImgUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/profile.jpg`;
+const microsoft = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/microsoft.png`;
+const QuEra = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/QuEra.png`;
+const oka = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/oka.png`;
 
-
+const imgGroup2 = [microsoft, QuEra, oka]
 
 // Main HomePage Component
 export default function HomePage() {
@@ -24,6 +28,11 @@ export default function HomePage() {
       </div>
       <div className=''>
         <EducationPart />
+      </div>
+
+      <div className='mt-[4rem]'>
+      <TitleOne title='Collabrations'/>
+      <ImageGroup imgGroup={imgGroup2}/>
       </div>
     </div>
   );

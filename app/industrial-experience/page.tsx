@@ -7,6 +7,7 @@ import { FaBrain } from 'react-icons/fa';
 
 import ImageGroup from '@/components/image_group';
 import TechIcons from '@/components/skill-icons';
+import TitleOne from '@/components/title-one';
 
 const KLA_3D_NAND = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/KLA_3D_NAND.png`;
 const kla_logo = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/kla_logo.png`;
@@ -16,12 +17,12 @@ const QuEra = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/QuEra.png`;
 const oka = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/oka.png`;
 const imgGroup1 = [KLA_3D_NAND, kla_logo, KLA_c]
 const imgGroup2 = [microsoft, QuEra, oka]
-const imgGroupList = [imgGroup1,imgGroup2 ]
+const imgGroupList = [imgGroup1]
 
 // Main HomePage Component
 const Industry = () => {
   return (
-    <div>
+    <div className='px-body1'>
       <ExperiencePart />
 
     </div>
@@ -95,14 +96,19 @@ const ExperiencePart: React.FC = () => {
         {experienceList.length > 0 ? (
           experienceList.map((job, index) => (
             <div key={index} className="education-entry">
-              <div className='flex justify-between'>
-                <div>
-                  <strong>{job.title}, </strong> <i>{job.location}</i>
-                  <span> ({job.company})</span>
+              <TitleOne title={job.title} right={`${job.startYear} - ${job.endYear}`}
+              >
+                <div className='flex items-end'>
+                  <b className='px-[0.5rem]'>{job.company} </b>
+                  <i>({job.location})</i>
                 </div>
-                <span> {job.startYear} - {job.endYear}</span>
-              </div>
-              {job.skillset && <TechIcons skills={job.skillset} />}
+              </TitleOne>
+
+              {job.skillset && <div className='flex gap-5'>
+                <div className="block bg-sky-100 h-full">Skills:</div>
+
+                <TechIcons skills={job.skillset} />
+                </div>}
 
               {job.mentor && <div>Mentor: {job.mentor}</div>}
               {job.manager && <p>Manager: {job.manager}</p>}
@@ -115,7 +121,9 @@ const ExperiencePart: React.FC = () => {
                   ))}
                 </div>
               ))}
-              <ImageGroup imgGroup={imgGroupList[index]}/>
+
+              {index < imgGroupList.length && <ImageGroup imgGroup={imgGroupList[index]} />}
+
             </div>
           ))
         ) : (
