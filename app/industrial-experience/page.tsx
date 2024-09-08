@@ -9,15 +9,18 @@ import ImageGroup from '@/components/image_group';
 import TechIcons from '@/components/skill-icons';
 import TitleOne from '@/components/title-one';
 
-const KLA_3D_NAND = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/KLA_3D_NAND.png`;
-const kla_logo = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/kla_logo.png`;
-const KLA_c = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/KLA_c.jpg`;
-const microsoft = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/microsoft.png`;
-const QuEra = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/QuEra.png`;
-const oka = `${process.env.NEXT_PUBLIC_BASE_PATH}/home/oka.png`;
+const KLA_3D_NAND = `${process.env.NEXT_PUBLIC_BASE_PATH}/industrial-experience/KLA_3D_NAND.png`;
+const kla_logo = `${process.env.NEXT_PUBLIC_BASE_PATH}/industrial-experience/kla_logo.png`;
+const KLA_c = `${process.env.NEXT_PUBLIC_BASE_PATH}/industrial-experience/KLA_c.jpg`;
+
+const Xingyulogo = `${process.env.NEXT_PUBLIC_BASE_PATH}/industrial-experience/Xingyu-logo.jpg`;
+const car = `${process.env.NEXT_PUBLIC_BASE_PATH}/industrial-experience/car.jpg`;
+const light = `${process.env.NEXT_PUBLIC_BASE_PATH}/industrial-experience/light.jpg`;
+
+
 const imgGroup1 = [KLA_3D_NAND, kla_logo, KLA_c]
-const imgGroup2 = [microsoft, QuEra, oka]
-const imgGroupList = [imgGroup1]
+const imgGroup2 = [Xingyulogo, car, light]
+const imgGroupList = [imgGroup1, imgGroup2]
 
 // Main HomePage Component
 const Industry = () => {

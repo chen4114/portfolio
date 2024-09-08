@@ -1,4 +1,13 @@
+import Image from 'next/image';
 import React from 'react'
+
+const RAPTOR_2024_08 = `${process.env.NEXT_PUBLIC_BASE_PATH}/news/RAPTOR_2024_08.jpg`;
+const AP_news_2024_07 = `${process.env.NEXT_PUBLIC_BASE_PATH}/news/AP_news_2024_07.png`;
+const SPIE_news_2024_07 = `${process.env.NEXT_PUBLIC_BASE_PATH}/news/SPIE_news_2024_07.png`;
+const maine_2024_07 = `${process.env.NEXT_PUBLIC_BASE_PATH}/news/maine_2024_07.jpg`;
+const Quantum_sci_center_2024_05 = `${process.env.NEXT_PUBLIC_BASE_PATH}/news/Quantum_sci_center_2024_05.png`;
+const photonics_design_2013_12 = `${process.env.NEXT_PUBLIC_BASE_PATH}/news/photonics_design_2013_12.png`;
+
 
 const NewsPage = () => {
   const paperlinkStyle = "font-[400] italic text-sky-500"
@@ -18,6 +27,10 @@ const NewsPage = () => {
           href='https://www.securingindustry.com/electronics-and-industrial/ai-powered-optical-detection-tackles-fake-chips/s105/a16228/'>
           [News]
         </a>
+
+          <div className='relative h-[10rem] flex mt-2'>
+            <Image src={RAPTOR_2024_08} alt='' layout="fill" objectFit='contain' objectPosition='left'/>
+          </div>
       </div>
 
       <div className='mt-3'>
@@ -29,6 +42,9 @@ const NewsPage = () => {
           href='https://spie.org/news/ai-powered-optical-detection-to-thwart-counterfeit-chips#_=_'>
           [News]
         </a>
+        <div className='relative h-[10rem] mt-2'>
+          <Image src={SPIE_news_2024_07} alt='' layout="fill" objectFit='contain' objectPosition='left'/>
+        </div>
       </div>
 
       <div className='mt-3'>
@@ -39,6 +55,9 @@ const NewsPage = () => {
           href='https://www.spiedigitallibrary.org/journals/advanced-photonics/volume-6/issue-05/056002/Authentication-through-residual-attention-based-processing-of-tampered-optical-responses/10.1117/1.AP.6.5.056002.full?tab=ArticleLink'>
           [Paper]
         </a>
+        <div className='relative h-[10rem] mt-2'>
+          <Image src={AP_news_2024_07} alt='' layout="fill" objectFit='contain' objectPosition='left'/>
+        </div>
       </div>
 
       <div className='mt-3'>
@@ -46,6 +65,9 @@ const NewsPage = () => {
           2024-07
         </span>
         Glad to present our generative AI work &apos;Topological latent diffusion model-assisted meta-atom design&apos; at this years&apos; Gordon Research Conference in Plasmonics and Nanophotonics at Maine. People enjoy European Championship soccer game when doing poster session.
+        <div className='relative h-[10rem] mt-2'>
+          <Image src={maine_2024_07} alt='' layout="fill" objectFit='contain' objectPosition='left'/>
+        </div>
       </div>
 
 
@@ -53,11 +75,18 @@ const NewsPage = () => {
         <span className={`${dateStyle}`}>
           2024-05
         </span> Second time come to Santa Fe for this year&apos;s DOE Quantum Science Center (QSC) All-Hands meeting. Great opportunity to present nation-wide researchers with our work in &apos;Empowering quantum devices with generative AI-topological latent diffusion model&apos;.
+        <div className='relative h-[10rem] mt-2'>
+          <Image src={Quantum_sci_center_2024_05} alt='' layout="fill" objectFit='contain' objectPosition='left'/>
+        </div>
       </div>
       <div className='mt-3'>
         <span className={`${dateStyle}`}>
           2023-12
-        </span> Our insightful review paper &apos;Designing metasurfaces for efficient solar energy conversion&apos; is online as part of ACS Photonics virtual special issue “Photonics for Energy”.
+        </span>
+        Our insightful review paper &apos;Designing metasurfaces for efficient solar energy conversion&apos; is online as part of ACS Photonics virtual special issue “Photonics for Energy”.
+        <div className='relative h-[10rem] mt-2'>
+          <Image src={photonics_design_2013_12} alt='' layout="fill" objectFit='contain' objectPosition='left'/>
+        </div>
       </div>
     </div>
   )
