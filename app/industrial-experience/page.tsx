@@ -104,15 +104,18 @@ const ExperiencePart: React.FC = () => {
                 </div>
               </TitleOne>
 
-              {job.skillset && <div className='flex gap-5'>
-                <div className="block bg-sky-100 h-full">Skills:</div>
-
+              {job.skillset && <div className='flex  mt-3'>
+                <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Skills:</span>
                 <TechIcons skills={job.skillset} />
-                </div>}
+              </div>}
 
-              {job.mentor && <div>Mentor: {job.mentor}</div>}
-              {job.manager && <p>Manager: {job.manager}</p>}
-              {job.skillset && <div>Skills: {job.skillset}</div>}
+              {job.mentor && <div className='flex mt-2'> <span className="block bg-sky-900 text-white h-full rounded-md px-2 mr-3">Mentor:</span>
+
+                <span className='font-[800]'>{job.mentor}</span>
+              </div>}
+              {job.manager && <div className='flex mt-2'> <span className="block bg-sky-900 text-white h-full rounded-md px-2 mr-3">Manager:</span>
+                <span className='font-[800]'>{job.manager}</span>
+              </div>}
               {Object.keys(job.content).map((key, index) => (
                 <div key={index}>
                   <p className='font-[600]'>{key}</p>
