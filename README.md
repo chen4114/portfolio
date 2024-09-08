@@ -3,6 +3,6 @@ npm run dev
 
 
 #### Tailwind
-##### text style
+##### text & font style
 https://tailwindcss.com/docs/text-indent
 
