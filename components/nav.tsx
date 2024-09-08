@@ -20,20 +20,24 @@ const Nav = () => {
         <nav className='bg-white py-4'>
             <ul className='flex justify-center space-x-10'>
                 {links.map((link, index) => (
-                    <li key={index} className={`text-gray-800 hover:text-black font-medium ${pathname === link.url ? 'text-blue-500 underline decoration-sky-500 underline-offset-4' : ''
-                        }`}>
-                        <a href={link.url} className="text-sm uppercase tracking-wider">
+                    <li key={index} className={`text-gray-800 hover:text-black font-medium 
+                        `}>
+                        <a href={link.url} className={`${pathname === link.url ? 'text-sky-600 font-[600] underline decoration-sky-500 underline-offset-4' : ''
+                            } text-sm uppercase tracking-wider`}>
                             {link.title}
                         </a>
                     </li>
                 ))}
                 <a
                     href={`${resumePath}`}
-                    download
-                    className='flex items-center justify-center w-[12rem] h-[1.8rem] bg-gray-400 hover:bg-gray-600 text-white rounded-lg hover:bg-gray-700'
+                    // download
+                    target="_blank"        
+                    rel="noopener noreferrer" 
+
+                    className='flex items-center justify-center w-[5.5rem] h-[1.8rem] bg-gray-400 hover:bg-gray-600 text-white rounded-lg hover:bg-gray-700'
                 >
-                    <FaDownload className='mr-2' />
-                    Download Resume
+                    {/* <FaDownload className='mr-2' /> */}
+                    Resume
                 </a>
             </ul>
 
