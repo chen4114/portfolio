@@ -17,16 +17,8 @@ const NewsPage = () => {
   const paperlinkInView = ""
 
   const dateStyle = "inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2"
-  const [isMobile, setIsMobile] = useState(false)
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    window.addEventListener('resize', handleResize)
-    handleResize() // Check on mount
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
   return (
     <div className={`${isMobile ? "px-mobile":"px-body1"}`}>
 

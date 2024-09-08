@@ -27,16 +27,7 @@ const imgGroupList = [imgGroup1, imgGroup2]
 
 // Main HomePage Component
 const Industry = () => {
-  const [isMobile, setIsMobile] = useState(false)
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    window.addEventListener('resize', handleResize)
-    handleResize() // Check on mount
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   return (
     <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
       <ExperiencePart isMobile={isMobile} />
