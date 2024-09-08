@@ -2,7 +2,8 @@ import TechIcons from '@/components/skill-icons'
 import TitleOne from '@/components/title-one'
 import React from 'react'
 
-const paperlineStyle = "font-[800] italic text-sky-800"
+const paperlinkStyle = "font-[400] italic text-sky-500"
+const paperlinkInView = ""
 
 const ResearchPage = () => {
   return (
@@ -19,16 +20,15 @@ const ResearchPage = () => {
           <TechIcons skills={"Python, PyTorch, Photonics Simulation (Comsol & Lumerical), Deep Learning, Quantum Computation, Large Language Model (LLM)"} />
         </div>
 
-        <div className='bg-gray-500 text-white px-4 py-2 my-4'>
+        <div className='text-gray-600 px-4 py-2 my-4 border-l-[4px] border-l-gray-300'>
           We present using machine learning/quantum computing forcharacterization, fabrication, and inverse design of device applications, such as adjoint simulation, generative model-assisted design, hybrid quantum-classical optimization, LLM model-embedded multimodal training.
         </div>
-        <div className='parts '>
+        <div className='Projects '>
 
-          <ul className='part1'>
+          <ul className='Project1'>
             <p>
-              <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Part 1:</span>
+              <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 1:</span>
               Advancing photonic design with topological latent diffusion generative model
-
             </p>
 
             <li>
@@ -38,10 +38,10 @@ const ResearchPage = () => {
               • Applied efficiency prediction model-embedded conditional U-net and demonstrated substantial efficiency improvement compared with state-of-the-art generative model benchmarks.
             </li>
           </ul>
-          <ul className='part2'>
+          <ul className='Project2'>
 
             <p>
-              <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Part 2:</span>
+              <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 2:</span>
               Variational neural annealing for latent polynomial unconstrained binary optimization (PUBO) in device design
             </p>
 
@@ -53,9 +53,9 @@ const ResearchPage = () => {
             </li>
           </ul>
 
-          <ul className='part3'>
+          <ul className='Project3'>
             <p>
-              <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Part 3:</span>
+              <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 3:</span>
               Multimodal model for prompt-guided integrated photonics design
 
             </p>
@@ -74,11 +74,11 @@ const ResearchPage = () => {
           </p>
           <li>
             1. M. Bezick†, <span className="font-[800]">Y. Chen†</span>, B. Wilson, A. V. Kildishev, V. M. Shalaev, and A. Boltasseva, &apos;Latent diffusion models for global optimization in inverse design&apos;, arxiv, Nature Communications,
-            <span className={`${paperlineStyle}`}>in review</span>.
+            <span className={`${paperlinkInView}`}>in review</span>.
           </li>
           <li>
             2. M. Bezick, B. Wilson, V. Iyer, <span className="font-[800]">Y. Chen</span>, V. M. Shalaev, S. Kais, A. Boltasseva, and B. Lackey, &apos;Pearson-correlated variational neural annealing for latent PUBO optimization&apos;, arxiv, Advanced Optical Materials,
-            <span className={`${paperlineStyle}`}>in review</span>.
+            <span className={`${paperlinkInView}`}>in review</span>.
 
           </li>
           <li>
@@ -91,7 +91,7 @@ const ResearchPage = () => {
           </li>
           <li>
             5. B. Wilson, <span className="font-[800]">Y. Chen</span>, S. Kais, A. Kildishev, V. Shalaev, and A. Boltasseva, &apos;Empowering quantum 2.0 devices and approaches with machine learning&apos;, Optica Quantum 2.0 Conference and Exhibition, QTu2A.13 (2022).
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://opg.optica.org/abstract.cfm?uri=QUANTUM-2022-QTu2A.13'>
               [Paper]
             </a>
@@ -100,7 +100,7 @@ const ResearchPage = () => {
           <li>
 
             6. <span className="font-[800]">Y. Chen</span>, B. Wilson, A. Kildishev, V. Shalaev, and A. Boltasseva, &apos;Generative models for photonics device design and optimization&apos;,
-            <span className={`${paperlineStyle} `}>in preparation</span>.
+            <span className={`${paperlinkInView} `}>in preparation</span>.
 
           </li>
         </ul>
@@ -115,21 +115,21 @@ const ResearchPage = () => {
           <TechIcons skills={"Python, PyTorch, Computer Vision, Deep Learning, Image Segmentation, Data Augmentation"} />
         </div>
 
-        <div className='bg-gray-500 text-white px-4 py-2 my-4'>
+        <div className='text-gray-600 px-4 py-2 my-4 border-l-[4px] border-l-gray-300'>
           The global chip industry is grappling with dual challenges: a profound shortage of new chips and a surge of counterfeit chips valued at $75 billion, introducing substantial risks of malfunction and unwanted surveillance. To counteract this, we propose optical anti-counterfeiting methods for semiconductor devices that is robust under adversarial tampering features.
 
         </div>
 
         <ul>
           <p>
-            <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Part 1:</span>
+            <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 1:</span>
             Authentication in chip encryption through deep engine-based processing of tampered optical responses
           </p>
           <p>
-            • Designed a RAPTOR (Residual, Attention-based Processing of Tampered Optical Response) discriminator for identifying adversarial tampering of an optical, physical unclonable function based on a random array of gold nanoparticles embedded in semiconductor packaging.
+            • Designed a RAPTOR (Residual, Attention-based Processing of Tampered Optical Response) discriminator for identifying adversarial tampering of an optical, physical unclonable function based on a random array of gold nanoProjecticles embedded in semiconductor packaging.
           </p>
           <p>
-            • Extracted features of gold nanoparticles from 1000 dark-field images in just 27 ms and verified their authenticity using RAPTOR in 80 ms with 97.6% accuracy under difficult adversarial tampering conditions.
+            • Extracted features of gold nanoProjecticles from 1000 dark-field images in just 27 ms and verified their authenticity using RAPTOR in 80 ms with 97.6% accuracy under difficult adversarial tampering conditions.
           </p>
         </ul>
 
@@ -143,7 +143,7 @@ const ResearchPage = () => {
           <li>
             1. B. Wilson†, <span className="font-[800]">Y. Chen†</span>, D. K. Singh, R. Ojha, J. Pottle, M. Bezick, A. Boltasseva, V. M. Shalaev, and A. V. Kildishev, &apos;Authentication through residual attention-based processing of tampered optical responses&apos;, <span className=''>Advanced Photonics</span>, 6(5), 056002-056002 (2024).
 
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://www.spiedigitallibrary.org/journals/advanced-photonics/volume-6/issue-05/056002/Authentication-through-residual-attention-based-processing-of-tampered-optical-responses/10.1117/1.AP.6.5.056002.full?tab=ArticleLink'>
               [Paper]
             </a>
@@ -156,7 +156,7 @@ const ResearchPage = () => {
           </li>
           <li>
             3. SPIE featured news on our work: &apos;AI-powered optical detection to thwart counterfeit chips, researchers developed a robust optical anticounterfeit method for semiconductor devices&apos;.
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://spie.org/news/ai-powered-optical-detection-to-thwart-counterfeit-chips#_=_'>
               [News]
             </a>
@@ -171,17 +171,17 @@ const ResearchPage = () => {
 
         <div className='flex  mt-3'>
           <span className="block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Skills:</span>
-          <TechIcons skills={"Photonics Simulation (Comsol, Lumerical), Nanofabrication (cleanroom experience in process design, lithographing, etching, and characterization), Python, Matlab,"} />
+          <TechIcons skills={"Photonics Simulation (Comsol & Lumerical), Nanofabrication (cleanroom experience in process design & lithographing & etching & characterization), Python, Matlab"} />
         </div>
 
-        <div className='bg-gray-500 text-white px-4 py-2 my-4'>
+        <div className='text-gray-600 px-4 py-2 my-4 border-l-[4px] border-l-gray-300'>
           We demonstrate novel nanofabrication method for light-matter plasmonic enhancement based on 2D materials. Also explore metasurface designs for efficient solar energy conversion.
 
         </div>
 
         <ul>
           <p>
-            <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Part1:</span>
+          <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 1:</span>
             Integrated 2D semiconductor light-emitting devices with plasmonic nanostructures
 
           </p>
@@ -196,7 +196,7 @@ const ResearchPage = () => {
         </ul>
         <ul>
           <p>
-            <span className="inline-block bg-sky-900 text-white h-full rounded-md px-2 mr-2">Part2:</span>
+            <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 2:</span>
             Self-organized lithography-free nanodevice fabrication with tunable optical anisotropy
 
           </p>
@@ -214,31 +214,31 @@ const ResearchPage = () => {
 
           </p>
           <li>1. L. Mascaretti, <span className="font-[800]">Y. Chen</span>, O. Henrotte, O. Yesilyurt, V. M. Shalaev, A. Naldoni, and A. Boltasseva, &apos;Designing metasurface for efficient solar energy conversion&apos;, ACS Photonics, 10(12), 4079-4103 (2023).
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://pubs.acs.org/doi/full/10.1021/acsphotonics.3c01013'>
               [Paper]
             </a>
           </li>
           <li>2. <span className="font-[800]">Y. Chen</span>, H. Li, M. Blei, M. Cai, H. Zang, Y. Lu, S. Tongay, and Y. Liu, &apos;Monolayer excitonic semiconductors integrated with Au quasi-periodic nanoterrace morphology on fused silica substrates for light-emitting devices&apos;, ACS Applied Nano Materials, 4, 84-93 (2021).
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://pubs.acs.org/doi/10.1021/acsanm.0c02386'>
               [Paper]
             </a>
           </li>
           <li>3. <span className="font-[800]">Y. Chen</span>, M. Cai, H. Zang, H. Chen, S. Kroker, Y. Lu, Y. Liu, F. Frost, and Y. Hong, &apos;Optical anisotropy of self-organized gold quasi-blazed nanostructures based on a broad ion beam&apos;, Applied Optics, 60, 505-512 (2021).
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://doi.org/10.1364/AO.412631'>
               [Paper]
             </a>
           </li>
           <li>4. <span className="font-[800]">Y. Chen</span>, M. Cai, K. Qiu, and Y. Hong, &apos;Optical anisotropy of metal nanowire arrays on fused silica surface&apos;, Proceedings of SPIE, 114271N (2020).
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://doi.org/10.1117/12.2551664'>
               [Paper]
             </a>
           </li>
           <li>5. M. Cai, Z. Chen, <span className="font-[800]">Y. Chen</span>, K. Qiu, X. Xu, and Y. Hong, &apos;Design of near-infrared resonance antenna array filters in termophotovoltaic application&apos;, Proceedings of SPIE, 114274E (2020).
-            <a className={`${paperlineStyle}`}
+            <a className={`${paperlinkStyle}`}
               href='https://doi.org/10.1117/12.2553233'>
               [Paper]
             </a>

@@ -109,13 +109,14 @@ const ExperiencePart: React.FC = () => {
                 <TechIcons skills={job.skillset} />
               </div>}
 
-              {job.mentor && <div className='flex mt-2'> <span className="block bg-sky-900 text-white h-full rounded-md px-2 mr-3">Mentor:</span>
-
-                <span className='font-[800]'>{job.mentor}</span>
-              </div>}
-              {job.manager && <div className='flex mt-2'> <span className="block bg-sky-900 text-white h-full rounded-md px-2 mr-3">Manager:</span>
-                <span className='font-[800]'>{job.manager}</span>
-              </div>}
+              {job.mentor && <span className="block text-sky-900 h-full rounded-md px-2 mr-3">
+                Mentor: {job.mentor}
+              </span>
+              }
+                       {job.manager && <span className="block text-sky-900 h-full rounded-md px-2 mr-3">
+                Manager: {job.manager}
+              </span>
+              }
               {Object.keys(job.content).map((key, index) => (
                 <div key={index}>
                   <p className='font-[600]'>{key}</p>

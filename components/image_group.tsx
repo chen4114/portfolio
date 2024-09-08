@@ -15,9 +15,6 @@ const ImageGroup:React.FC<ImgGroupProp> = ({imgGroup}) => {
       </div>
       </>
     ))}
-    test
-
-
   </div>
   )
 }
