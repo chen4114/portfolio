@@ -24,7 +24,7 @@ const Nav = () => {
     }, [])
 
     const pathname = usePathname();
-    const resumePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/files/Resume_Yuheng Chen_Purdue_ECE_PhD.pdf`
+    const resumePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/Resume_Yuheng Chen_Purdue_ECE_PhD.pdf`
 
     const links = [
         { title: "Home", url: `${process.env.NEXT_PUBLIC_BASE_PATH}/` },
