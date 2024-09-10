@@ -63,7 +63,7 @@ function ContactInfo() {
   const email = "chen4114@purdue.edu";
   const github = "https://github.com/NanoMetaML";
   const googleScholar = "https://scholar.google.com/citations?user=yourID";
-  const linkedinUrl = "linkedin.com/in/yh-chen-purdue/"
+  const linkedinUrl = "https://www.linkedin.com/in/yh-chen-purdue/"
 
 
   return (
