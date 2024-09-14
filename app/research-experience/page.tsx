@@ -3,6 +3,23 @@ import { useEffect, useState } from 'react';
 import TechIcons from '@/components/skill-icons'
 import TitleOne from '@/components/title-one'
 import React from 'react'
+import ImageGroup from '@/components/image_group';
+
+
+const Research_1 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_1.png`;
+const Research_3 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_3.png`;
+const Research_5 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_5.jpg`;
+const Research_7 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_7.png`;
+const Research_2 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_2.png`;
+const Research_4 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_4.png`;
+const Research_6 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_6.png`;
+const Research_8 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_8.jpeg`;
+const Research_9 = `${process.env.NEXT_PUBLIC_BASE_PATH}/research-experience/Research_9.jpeg`;
+const imgGroup1 =[Research_1, Research_2, Research_3, Research_4]
+
+const imgGroup2 =  [Research_5, Research_6, Research_7]
+const imgGroup3 =  [Research_8, Research_9]
+
 
 const paperlinkStyle = "font-[400] italic text-sky-500"
 const paperlinkInView = ""
@@ -35,6 +52,8 @@ const ResearchPage = () => {
         <div className='text-gray-600 px-4 py-2 my-4 border-l-[4px] border-l-gray-300'>
           We present using machine learning/quantum computing forcharacterization, fabrication, and inverse design of device applications, such as adjoint simulation, generative model-assisted design, hybrid quantum-classical optimization, LLM model-embedded multimodal training.
         </div>
+
+        <ImageGroup imgGroup={imgGroup1}/>
         <div className='Projects '>
 
           <ul className='Project1'>
@@ -132,6 +151,9 @@ const ResearchPage = () => {
 
         </div>
 
+
+        <ImageGroup imgGroup={imgGroup2}/>
+
         <ul>
           <p>
             <span className="inline-block bg-slate-200 text-slate-800 h-full rounded-md px-2 mr-2">Project 1:</span>
@@ -190,6 +212,7 @@ const ResearchPage = () => {
           We demonstrate novel nanofabrication method for light-matter plasmonic enhancement based on 2D materials. Also explore metasurface designs for efficient solar energy conversion.
 
         </div>
+        <ImageGroup imgGroup={imgGroup3}/>
 
         <ul>
           <p>
