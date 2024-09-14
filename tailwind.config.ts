@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       spacing: {
-        'body1': '4rem',  // 2px
+        'body1': '12rem',  // 2px
         'mobile':"1rem",
       },
     },

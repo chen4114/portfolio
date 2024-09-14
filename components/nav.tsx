@@ -75,7 +75,7 @@ const Nav = () => {
                     </ul>
                 )}
             </div> :
-                <ul className='flex justify-center space-x-10'>
+                <ul className='px-body1 flex justify-between space-x-10'>
                     {links.map((link, index) => (
                         <li key={index} className={`text-gray-800 hover:text-black font-medium 
                     `}>

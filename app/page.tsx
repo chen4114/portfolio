@@ -30,15 +30,13 @@ export default function HomePage() {
   return (
     <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
       <div className={`flex mt-[2rem]  ${isMobile && "flex-col"}`}>
-        <div className={`w-[22rem] mr-[2rem]`}>
+        <div className={`w-[25rem] ${!isMobile && "mr-[4rem]"} ]`}>
           <ContactInfo />
         </div>
         {!isMobile && <div className=' flex items-center'>   {/* divider */}
           <div className='w-[2px] h-[20rem] max-h-[100%] bg-gray-200'></div>
         </div>}
-        <div className={`${isMobile ? "mt-6" : "ml-[2rem]  px-4"} flex-grow`}>
-
-
+        <div className={`${isMobile ? "mt-6" : "ml-[4rem]  px-4"} flex-grow`}>
           <About />
         </div>
       </div>
@@ -48,7 +46,18 @@ export default function HomePage() {
 
       <div className='mt-[4rem]'>
         <TitleOne title='Collabrations' />
-        <ImageGroup imgGroup={imgGroup2} />
+        {/* <ImageGroup imgGroup={imgGroup2} /> */}
+        <div className='flex items-center gap-10'>
+          <div className={`relative w-[23vw] h-[10vw]`}>
+            <Image src={imgGroup2[0]} alt='' layout="fill" objectFit='contain' />
+          </div>
+          <div className={`relative w-[25vw] h-[12vw]`}>
+            <Image src={imgGroup2[1]} alt='' layout="fill" objectFit='contain' />
+          </div>
+          <div className={`relative w-[45vw] h-[10vw]`}>
+            <Image src={imgGroup2[2]} alt='' layout="fill" objectFit='contain' />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -68,7 +77,7 @@ function ContactInfo() {
 
   return (
     <div className="container ">
-      <div className="w-[12rem] h-[15rem] overflow-hidden relative ">
+      <div className="w-[15rem] h-[20rem] overflow-hidden relative ">
         <Image
           src={profileImgUrl}
           alt="Profile Picture"
@@ -106,7 +115,7 @@ function About() {
     <div className=" ">
       <div className="text-xl font-bold ">Hi, I am Yuheng Chen!</div>
       <p className='font-[600]'>I&apos;m actively looking for full-time internship opportunities for 2025 summer!</p>
-      <ul className='italic text-sm text-slate-500'>
+      <ul className='italic text-sm text-slate-500 my-[1rem]'>
         <li>AI + Optics/Photonics + Semiconductor</li>
         <li>PhD Candidate / NanoML Team Leader @ Purdue ECE </li>
         <li>Ex ML Algorithm Engineer Intern @ KLA</li>
@@ -119,6 +128,7 @@ function About() {
         </a>
 
         I am also leading the <a className='text-blue-600 italic' href='https://nanoml.org/'>NanoML team</a> (Nanophotonics Machine Learning team) comprising 15 Purdue postgraduate and undergraduate researchers.
+        <br />
         My academic journey focuses on inverse design-based optics/photonics device optimizations, including machine learning algorithm development and simulation analysis.
         This journey has led me to coauthor <a className='text-blue-600 italic' href='https://scholar.google.com/citations?hl=en&user=NI8OimMAAAAJ&view_op=list_works&gmla=AJsN-F4YF1IEkUNiR5fd-TH5_-qhpgK6Axq_GvOmg5tj_-bC2ympUXms3VA_1B9E3z6JPQ_UVVXNNTiVdu6CzFtbaZ72OHMPN3kRNP1AyN6bGaPHNp7NaBo'> high-impact papers</a>, significantly advancing our understanding of these cutting-edge topics.
         My research collaborators include scientists and engineers from Microsoft, QuEra, and Oak Ridge National Lab.
