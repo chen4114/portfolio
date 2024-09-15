@@ -53,8 +53,8 @@ const ResearchPage = () => {
           We present using machine learning/quantum computing forcharacterization, fabrication, and inverse design of device applications, such as adjoint simulation, generative model-assisted design, hybrid quantum-classical optimization, LLM model-embedded multimodal training.
         </div>
 
-        <ImageGroup imgGroup={imgGroup1.slice(0,2)}/>
-        <ImageGroup imgGroup={imgGroup1.slice(2)}/>
+        <ImageGroup imgGroup={imgGroup1.slice(0,3)}/>
+        {/* <ImageGroup imgGroup={imgGroup1.slice(2)} imageStyle={'h-[15vw] w-[30vw] px-5'}/> */}
         <div className='Projects '>
 
           <ul className='Project1'>

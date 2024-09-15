@@ -8,10 +8,14 @@ interface ImgGroupProp {
 
 const ImageGroup: React.FC<ImgGroupProp> = ({ imgGroup, imageStyle ="" }) => {
 
- if (!imageStyle && imgGroup.length !== 2) {
-  imageStyle = "h-[15rem] w-[20rem]"
- } else if (imgGroup.length == 2) {
+  if (imageStyle) {
+
+  } else if (imgGroup.length == 2) {
   imageStyle = "w-[30vw] min-h-[18vw] px-5"
+ } else if (imgGroup.length == 3) {
+imageStyle = "w-[30vw] min-h-[18vw] px-5"
+ } else {
+  imageStyle = "h-[15rem] w-[20rem]"
  }
   return (
     <div className='flex gap-5 justify-between '>
