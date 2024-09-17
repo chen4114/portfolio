@@ -75,12 +75,12 @@ const Nav = () => {
                     </ul>
                 )}
             </div> :
-                <ul className='px-body1 flex justify-between space-x-10'>
+                <ul className='px-body1 flex justify-between space-x-10 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]'>
                     {links.map((link, index) => (
                         <li key={index} className={`text-gray-800 hover:text-black font-medium 
                     `}>
                             <a href={link.url} className={`${pathname === link.url ? 'text-sky-600 font-[600] underline decoration-sky-500 underline-offset-4' : ''
-                                } text-sm uppercase tracking-wider`}>
+                                }  uppercase tracking-wider`}>
                                 {link.title}
                             </a>
                         </li>
@@ -91,7 +91,12 @@ const Nav = () => {
                         target="_blank"
                         rel="noopener noreferrer"
 
-                        className='flex items-center justify-center w-[5.5rem] h-[1.8rem] bg-gray-400 hover:bg-gray-600 text-white rounded-lg hover:bg-gray-700'
+                        className='flex items-center justify-center inline-block 
+
+                         3xl:px-4 3xl:py-5  4xl:px-4 4xl:py-6 5xl:px-4 5xl:py-7
+
+                        
+                        h-[1.8rem] bg-gray-400 hover:bg-gray-600 text-white rounded-lg hover:bg-gray-700'
                     >
                         {/* <FaDownload className='mr-2' /> */}
                         Resume

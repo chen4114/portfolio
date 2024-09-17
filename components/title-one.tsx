@@ -10,7 +10,10 @@ const TitleOne: React.FC<TitleOneProps> = ({ title, right = "", children }) => {
     <div >
       <div className='flex justify-between  items-end'>
         <div className='flex'>
-        <div className='text-white bg-sky-600 inline-block text-[1.3rem] font-[600] px-[1rem]'> {title}</div>
+        <div className='text-white bg-sky-600 inline-block text-[1.3rem] 
+      3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]
+        
+        font-[600] px-[1rem]'> {title}</div>
 
           {children}
         </div>

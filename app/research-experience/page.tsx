@@ -36,7 +36,7 @@ const ResearchPage = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
   return (
-    <div className={`${isMobile ? "px-mobile":"px-body1"}`}>
+    <div className={`${isMobile ? "px-mobile":"px-body1 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]"}`}>
       <div className='Machine learning for device optimization mt-2'>
         <TitleOne title={"Machine learning for device optimization"} >
           <span className='text-sky-600 italic flex pt-1'>

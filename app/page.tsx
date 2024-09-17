@@ -28,7 +28,7 @@ export default function HomePage() {
 
 
   return (
-    <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
+    <div className={`${isMobile ? "px-mobile" : "px-body1  3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]"}`}>
       <div className={`flex mt-[2rem]  ${isMobile && "flex-col"}`}>
         <div className={`w-[25rem] ${!isMobile && "mr-[4rem]"} ]`}>
           <ContactInfo />
@@ -91,18 +91,18 @@ function ContactInfo() {
       <p className='text-center my-2'>Yuheng Chen</p>
 
       {/* <h1 className="text-xl font-bold mb-4">Contact Information</h1> */}
-      <div className="space-y-2">
-        <div className='flex items-center gap-2'>
-          <FaEnvelope /> <a href={`mailto:${email}`} className="text-blue-500 hover:text-blue-700">{email}</a>
+      <div className="space-y-2 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]">
+        <div className='flex items-center gap-2 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem] text-sky-600 hover:text-slate-400'>
+          <FaEnvelope /> <a href={`mailto:${email}`} className="">{email}</a>
         </div>
-        <div className='flex items-center gap-2'>
-          <FaGithub /> <a href={github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">github.com/NanoMetaML</a>
+        <div className='flex items-center gap-2 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem] text-sky-600 hover:text-slate-400'>
+          <FaGithub /> <a href={github} target="_blank" rel="noopener noreferrer" className="">github.com/NanoMetaML</a>
         </div>
-        <div className='flex items-center gap-2'>
-          <FaGoogle /> <a href={googleScholar} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Google Scholar</a>
+        <div className='flex items-center gap-2 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem] text-sky-600 hover:text-slate-400'>
+          <FaGoogle /> <a href={googleScholar} target="_blank" rel="noopener noreferrer" className="">Google Scholar</a>
         </div>
-        <div className='flex items-center gap-2'>
-          <FaLinkedinIn /> <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Linkedin @ yh-chen-purdue</a>
+        <div className='flex items-center gap-2 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem] text-sky-600 hover:text-slate-400'>
+          <FaLinkedinIn /> <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="">Linkedin @ yh-chen-purdue</a>
         </div>
       </div>
     </div>
@@ -113,9 +113,10 @@ function ContactInfo() {
 function About() {
   return (
     <div className=" ">
-      <div className="text-xl font-bold ">Hi, I am Yuheng Chen!</div>
+      <div className="text-xl font-bold 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem] ">Hi, I am Yuheng Chen!</div>
       <p className='font-[600]'>I&apos;m actively looking for full-time internship opportunities for 2025 summer!</p>
-      <ul className='italic text-sm text-slate-500 my-[1rem]'>
+      <ul className='italic flex flex-col text-sm text-slate-500 my-[1rem] 3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]
+   3xl:leading-[2rem] 4xl:leading-[2.5rem] 5xl:leading-[3rem]'>
         <li>AI + Optics/Photonics + Semiconductor</li>
         <li>PhD Candidate / NanoML Team Leader @ Purdue ECE </li>
         <li>Ex ML Algorithm Engineer Intern @ KLA</li>

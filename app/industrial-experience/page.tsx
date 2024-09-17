@@ -38,7 +38,7 @@ const Industry = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
   return (
-    <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
+    <div className={`${isMobile ? "px-mobile":"px-body1  3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]"}`}>
       <ExperiencePart isMobile={isMobile} />
 
     </div>

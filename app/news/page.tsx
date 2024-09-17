@@ -28,10 +28,11 @@ const NewsPage = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
   return (
-    <div className={`${isMobile ? "px-mobile" : "px-body1"}`}>
+   
+    <div className={`${isMobile ? "px-mobile":"px-body1  3xl:text-[1.2rem] 4xl:text-[1.4rem] 5xl:text-[1.6rem]"}`}>
 
 
-      <div className='news-piece'>
+      <div className='news-piece mt-5'>
         <span className={`${dateStyle}`}>
           2024-08
         </span>
@@ -44,7 +45,7 @@ const NewsPage = () => {
 
         </a>
 
-        <div className='relative h-[10rem] flex mt-2'>
+        <div className='relative h-[15rem] flex mt-2'>
           <Image src={RAPTOR_2024_08} alt='' layout="fill" objectFit='contain' objectPosition='left' />
         </div>
         <Divider  variant="dashed" style={{  borderColor: '#7cb305' }} dashed />
@@ -62,7 +63,7 @@ const NewsPage = () => {
           </span>
           <span className={`${paperlinkStyle}`}>[News]</span>
         </a>
-        <div className='relative h-[10rem] mt-2'>
+        <div className='relative h-[15rem] mt-2'>
           <Image src={SPIE_news_2024_07} alt='' layout="fill" objectFit='contain' objectPosition='left' />
         </div>
         <Divider  variant="dashed" style={{  borderColor: '#7cb305' }} dashed />
@@ -80,7 +81,7 @@ const NewsPage = () => {
           </span>
           <span className={`${paperlinkStyle}`}>[Paper]</span>
         </a>
-        <div className='relative h-[10rem] mt-2'>
+        <div className='relative h-[15rem] mt-2'>
           <Image src={AP_news_2024_07} alt='' layout="fill" objectFit='contain' objectPosition='left' />
         </div>
         <Divider  variant="dashed" style={{  borderColor: '#7cb305' }} dashed />
@@ -91,7 +92,7 @@ const NewsPage = () => {
           2024-07
         </span>
         Glad to present our generative AI work &apos;Topological latent diffusion model-assisted meta-atom design&apos; at this years&apos; Gordon Research Conference in Plasmonics and Nanophotonics at Maine. People enjoy European Championship soccer game when doing poster session.
-        <div className='relative h-[10rem] mt-2'>
+        <div className='relative h-[15rem] mt-2'>
           <Image src={maine_2024_07} alt='' layout="fill" objectFit='contain' objectPosition='left' />
         </div>
         <Divider  variant="dashed" style={{  borderColor: '#7cb305' }} dashed />
@@ -102,7 +103,7 @@ const NewsPage = () => {
         <span className={`${dateStyle}`}>
           2024-05
         </span> Second time come to Santa Fe for this year&apos;s DOE Quantum Science Center (QSC) All-Hands meeting. Great opportunity to present nation-wide researchers with our work in &apos;Empowering quantum devices with generative AI-topological latent diffusion model&apos;.
-        <div className='relative h-[10rem] mt-2'>
+        <div className='relative h-[15rem] mt-2'>
           <Image src={Quantum_sci_center_2024_05} alt='' layout="fill" objectFit='contain' objectPosition='left' />
         </div>
         <Divider  variant="dashed" style={{  borderColor: '#7cb305' }} dashed />
@@ -112,7 +113,7 @@ const NewsPage = () => {
           2023-12
         </span>
         Our insightful review paper &apos;Designing metasurfaces for efficient solar energy conversion&apos; is online as part of ACS Photonics virtual special issue “Photonics for Energy”.
-        <div className='relative h-[10rem] mt-2'>
+        <div className='relative h-[15rem] mt-2'>
           <Image src={photonics_design_2013_12} alt='' layout="fill" objectFit='contain' objectPosition='left' />
         </div>
         {/* <Divider  variant="dashed" style={{  borderColor: '#7cb305' }} dashed /> */}
